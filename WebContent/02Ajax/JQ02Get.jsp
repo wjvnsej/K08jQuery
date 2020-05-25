@@ -64,6 +64,22 @@ $(function(){
 			}
 		);
 	});
+	
+	$('#btnJSP').click(function(){
+		
+		$.get('./common/02PrintToday.jsp',
+			{
+				'msg' : $(this).text(),
+				'varStr': 'jQuery좋아효'
+			},
+				
+			function(data){
+				alert(data);
+				$('#jspDisplay').html(data);
+			}
+		);
+	});
+	
 });
 
 function locationGo(link) {
