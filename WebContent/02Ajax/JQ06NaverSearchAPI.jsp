@@ -44,12 +44,11 @@ $(function(){
 function sucFuncJson(d) {
 	//alert('성공 : ' + d);
 	var str = "";
-	var idx = 1;
 	
 	$.each(d.items, function(index, item) {
 		
 		str += "<ul>";
-		str += "	<li>" + idx + "</li>"; 
+		str += "	<li>" + (index + 1) + "</li>"; 
 		str += "	<li>" + item.title + "</li>";
 		str += "	<li>" + item.description + "</li>";
 		str += "	<li>" + item.bloggername + "</li>";
@@ -59,7 +58,6 @@ function sucFuncJson(d) {
 		str += "		target='_blank'>바로가기</a></li>";
 		str += "</ul>";
 		
-		idx++;
 	});
 	
 	$('#searchResult').html(str);
