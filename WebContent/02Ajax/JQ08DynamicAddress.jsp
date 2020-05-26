@@ -71,8 +71,9 @@ $(function(){
 	<div class="row">
 		<h2>우편번호DB를 이용한 시도/구군 동적셀렉트 구현</h2>
 	</div>
-	<div class="row">
-		<form id="zipFrm">
+	<form id="zipFrm">
+	<div class="row">		
+		<div class="col-4">
 			시/도:
 			<select id="sido" class="form-control">
 				<option value="">-시/도선택하삼-</option>
@@ -80,14 +81,17 @@ $(function(){
 					<option value="${sidoStr }">${sidoStr }</option>
 				</c:forEach>
 			</select>
-			<br />
+		</div>
+		<div class="col-8">
 			구/군:
 			<select id="gugun" class="form-control">
 				<option value="">-구/군선택하삼-</option>
-			</select>		
-		</form>
+			</select>
+		</div>		
 	</div>
+	</form>
 </div>
+
 
 
 </body>
